@@ -35,12 +35,11 @@
         <script src="js/labelgun.min.js"></script>
         <script src="js/labels.js"></script>
         <script src="data/Mesorregies_0.js"></script>
-        <script src="data/LimitesMunicipais_1.js"></script>
-        <script src="data/Subregies_2.js"></script>
-        <script src="data/RodoviasEstaduais2022_3.js"></script>
-        <script src="data/RodoviasFederal2022_4.js"></script>
-        <script src="data/Manaus_5.js"></script>
-        <script src="data/LimitedoAmazonas_6.js"></script>
+        <script src="data/Subregies_1.js"></script>
+        <script src="data/RodoviasEstaduais2022_2.js"></script>
+        <script src="data/RodoviasFederal2022_3.js"></script>
+        <script src="data/Manaus_4.js"></script>
+        <script src="data/LimitedoAmazonas_5.js"></script>
         <script>
         var map = L.map('map', {
             zoomControl:false, maxZoom:28, minZoom:1
@@ -185,66 +184,12 @@
         });
         bounds_group.addLayer(layer_Mesorregies_0);
         map.addLayer(layer_Mesorregies_0);
-        function pop_LimitesMunicipais_1(feature, layer) {
-            var popupContent = '<table>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['OBJECTID'] !== null ? autolinker.link(feature.properties['OBJECTID'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['NM_MUNICIP'] !== null ? autolinker.link(feature.properties['NM_MUNICIP'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['CD_GEOCMU'] !== null ? autolinker.link(feature.properties['CD_GEOCMU'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['Shape_Length'] !== null ? autolinker.link(feature.properties['Shape_Length'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['Shape_Area'] !== null ? autolinker.link(feature.properties['Shape_Area'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                </table>';
-            var content = removeEmptyRowsFromPopupContent(popupContent, feature);
-			layer.on('popupopen', function(e) {
-				addClassToPopupIfMedia(content, e.popup);
-			});
-			layer.bindPopup(content, { maxHeight: 400 });
+        function pop_Subregies_1(feature, layer) {
         }
 
-        function style_LimitesMunicipais_1_0() {
+        function style_Subregies_1_0() {
             return {
-                pane: 'pane_LimitesMunicipais_1',
-                opacity: 1,
-                color: 'rgba(128,128,128,1.0)',
-                dashArray: '',
-                lineCap: 'butt',
-                lineJoin: 'miter',
-                weight: 1.0, 
-                fill: true,
-                fillOpacity: 1,
-                fillColor: 'rgba(255,255,255,0.0)',
-                interactive: true,
-            }
-        }
-        map.createPane('pane_LimitesMunicipais_1');
-        map.getPane('pane_LimitesMunicipais_1').style.zIndex = 401;
-        map.getPane('pane_LimitesMunicipais_1').style['mix-blend-mode'] = 'normal';
-        var layer_LimitesMunicipais_1 = new L.geoJson(json_LimitesMunicipais_1, {
-            attribution: '',
-            interactive: true,
-            dataVar: 'json_LimitesMunicipais_1',
-            layerName: 'layer_LimitesMunicipais_1',
-            pane: 'pane_LimitesMunicipais_1',
-            onEachFeature: pop_LimitesMunicipais_1,
-            style: style_LimitesMunicipais_1_0,
-        });
-        bounds_group.addLayer(layer_LimitesMunicipais_1);
-        map.addLayer(layer_LimitesMunicipais_1);
-        function pop_Subregies_2(feature, layer) {
-        }
-
-        function style_Subregies_2_0() {
-            return {
-                pane: 'pane_Subregies_2',
+                pane: 'pane_Subregies_1',
                 opacity: 1,
                 color: 'rgba(35,35,35,1.0)',
                 dashArray: '',
@@ -257,21 +202,21 @@
                 interactive: true,
             }
         }
-        map.createPane('pane_Subregies_2');
-        map.getPane('pane_Subregies_2').style.zIndex = 402;
-        map.getPane('pane_Subregies_2').style['mix-blend-mode'] = 'normal';
-        var layer_Subregies_2 = new L.geoJson(json_Subregies_2, {
+        map.createPane('pane_Subregies_1');
+        map.getPane('pane_Subregies_1').style.zIndex = 401;
+        map.getPane('pane_Subregies_1').style['mix-blend-mode'] = 'normal';
+        var layer_Subregies_1 = new L.geoJson(json_Subregies_1, {
             attribution: '',
             interactive: true,
-            dataVar: 'json_Subregies_2',
-            layerName: 'layer_Subregies_2',
-            pane: 'pane_Subregies_2',
-            onEachFeature: pop_Subregies_2,
-            style: style_Subregies_2_0,
+            dataVar: 'json_Subregies_1',
+            layerName: 'layer_Subregies_1',
+            pane: 'pane_Subregies_1',
+            onEachFeature: pop_Subregies_1,
+            style: style_Subregies_1_0,
         });
-        bounds_group.addLayer(layer_Subregies_2);
-        map.addLayer(layer_Subregies_2);
-        function pop_RodoviasEstaduais2022_3(feature, layer) {
+        bounds_group.addLayer(layer_Subregies_1);
+        map.addLayer(layer_Subregies_1);
+        function pop_RodoviasEstaduais2022_2(feature, layer) {
             var popupContent = '<table>\
                     <tr>\
                         <td colspan="2">' + (feature.properties['id'] !== null ? autolinker.link(feature.properties['id'].toLocaleString()) : '') + '</td>\
@@ -284,9 +229,9 @@
 			layer.bindPopup(content, { maxHeight: 400 });
         }
 
-        function style_RodoviasEstaduais2022_3_0() {
+        function style_RodoviasEstaduais2022_2_0() {
             return {
-                pane: 'pane_RodoviasEstaduais2022_3',
+                pane: 'pane_RodoviasEstaduais2022_2',
                 opacity: 1,
                 color: 'rgba(0,0,0,1.0)',
                 dashArray: '',
@@ -297,9 +242,9 @@
                 interactive: true,
             }
         }
-        function style_RodoviasEstaduais2022_3_1() {
+        function style_RodoviasEstaduais2022_2_1() {
             return {
-                pane: 'pane_RodoviasEstaduais2022_3',
+                pane: 'pane_RodoviasEstaduais2022_2',
                 opacity: 1,
                 color: 'rgba(237,242,99,1.0)',
                 dashArray: '',
@@ -310,21 +255,21 @@
                 interactive: true,
             }
         }
-        map.createPane('pane_RodoviasEstaduais2022_3');
-        map.getPane('pane_RodoviasEstaduais2022_3').style.zIndex = 403;
-        map.getPane('pane_RodoviasEstaduais2022_3').style['mix-blend-mode'] = 'normal';
-        var layer_RodoviasEstaduais2022_3 = new L.geoJson.multiStyle(json_RodoviasEstaduais2022_3, {
+        map.createPane('pane_RodoviasEstaduais2022_2');
+        map.getPane('pane_RodoviasEstaduais2022_2').style.zIndex = 402;
+        map.getPane('pane_RodoviasEstaduais2022_2').style['mix-blend-mode'] = 'normal';
+        var layer_RodoviasEstaduais2022_2 = new L.geoJson.multiStyle(json_RodoviasEstaduais2022_2, {
             attribution: '',
             interactive: true,
-            dataVar: 'json_RodoviasEstaduais2022_3',
-            layerName: 'layer_RodoviasEstaduais2022_3',
-            pane: 'pane_RodoviasEstaduais2022_3',
-            onEachFeature: pop_RodoviasEstaduais2022_3,
-            styles: [style_RodoviasEstaduais2022_3_0,style_RodoviasEstaduais2022_3_1,]
+            dataVar: 'json_RodoviasEstaduais2022_2',
+            layerName: 'layer_RodoviasEstaduais2022_2',
+            pane: 'pane_RodoviasEstaduais2022_2',
+            onEachFeature: pop_RodoviasEstaduais2022_2,
+            styles: [style_RodoviasEstaduais2022_2_0,style_RodoviasEstaduais2022_2_1,]
         });
-        bounds_group.addLayer(layer_RodoviasEstaduais2022_3);
-        map.addLayer(layer_RodoviasEstaduais2022_3);
-        function pop_RodoviasFederal2022_4(feature, layer) {
+        bounds_group.addLayer(layer_RodoviasEstaduais2022_2);
+        map.addLayer(layer_RodoviasEstaduais2022_2);
+        function pop_RodoviasFederal2022_3(feature, layer) {
             var popupContent = '<table>\
                     <tr>\
                         <td colspan="2">' + (feature.properties['id'] !== null ? autolinker.link(feature.properties['id'].toLocaleString()) : '') + '</td>\
@@ -337,9 +282,9 @@
 			layer.bindPopup(content, { maxHeight: 400 });
         }
 
-        function style_RodoviasFederal2022_4_0() {
+        function style_RodoviasFederal2022_3_0() {
             return {
-                pane: 'pane_RodoviasFederal2022_4',
+                pane: 'pane_RodoviasFederal2022_3',
                 opacity: 1,
                 color: 'rgba(0,0,0,1.0)',
                 dashArray: '',
@@ -350,9 +295,9 @@
                 interactive: true,
             }
         }
-        function style_RodoviasFederal2022_4_1() {
+        function style_RodoviasFederal2022_3_1() {
             return {
-                pane: 'pane_RodoviasFederal2022_4',
+                pane: 'pane_RodoviasFederal2022_3',
                 opacity: 1,
                 color: 'rgba(227,26,28,1.0)',
                 dashArray: '',
@@ -363,26 +308,26 @@
                 interactive: true,
             }
         }
-        map.createPane('pane_RodoviasFederal2022_4');
-        map.getPane('pane_RodoviasFederal2022_4').style.zIndex = 404;
-        map.getPane('pane_RodoviasFederal2022_4').style['mix-blend-mode'] = 'normal';
-        var layer_RodoviasFederal2022_4 = new L.geoJson.multiStyle(json_RodoviasFederal2022_4, {
+        map.createPane('pane_RodoviasFederal2022_3');
+        map.getPane('pane_RodoviasFederal2022_3').style.zIndex = 403;
+        map.getPane('pane_RodoviasFederal2022_3').style['mix-blend-mode'] = 'normal';
+        var layer_RodoviasFederal2022_3 = new L.geoJson.multiStyle(json_RodoviasFederal2022_3, {
             attribution: '',
             interactive: true,
-            dataVar: 'json_RodoviasFederal2022_4',
-            layerName: 'layer_RodoviasFederal2022_4',
-            pane: 'pane_RodoviasFederal2022_4',
-            onEachFeature: pop_RodoviasFederal2022_4,
-            styles: [style_RodoviasFederal2022_4_0,style_RodoviasFederal2022_4_1,]
+            dataVar: 'json_RodoviasFederal2022_3',
+            layerName: 'layer_RodoviasFederal2022_3',
+            pane: 'pane_RodoviasFederal2022_3',
+            onEachFeature: pop_RodoviasFederal2022_3,
+            styles: [style_RodoviasFederal2022_3_0,style_RodoviasFederal2022_3_1,]
         });
-        bounds_group.addLayer(layer_RodoviasFederal2022_4);
-        map.addLayer(layer_RodoviasFederal2022_4);
-        function pop_Manaus_5(feature, layer) {
+        bounds_group.addLayer(layer_RodoviasFederal2022_3);
+        map.addLayer(layer_RodoviasFederal2022_3);
+        function pop_Manaus_4(feature, layer) {
         }
 
-        function style_Manaus_5_0() {
+        function style_Manaus_4_0() {
             return {
-                pane: 'pane_Manaus_5',
+                pane: 'pane_Manaus_4',
                 radius: 4.8,
                 opacity: 1,
                 color: 'rgba(0,0,0,1.0)',
@@ -396,27 +341,27 @@
                 interactive: true,
             }
         }
-        map.createPane('pane_Manaus_5');
-        map.getPane('pane_Manaus_5').style.zIndex = 405;
-        map.getPane('pane_Manaus_5').style['mix-blend-mode'] = 'normal';
-        var layer_Manaus_5 = new L.geoJson(json_Manaus_5, {
+        map.createPane('pane_Manaus_4');
+        map.getPane('pane_Manaus_4').style.zIndex = 404;
+        map.getPane('pane_Manaus_4').style['mix-blend-mode'] = 'normal';
+        var layer_Manaus_4 = new L.geoJson(json_Manaus_4, {
             attribution: '',
             interactive: true,
-            dataVar: 'json_Manaus_5',
-            layerName: 'layer_Manaus_5',
-            pane: 'pane_Manaus_5',
-            onEachFeature: pop_Manaus_5,
+            dataVar: 'json_Manaus_4',
+            layerName: 'layer_Manaus_4',
+            pane: 'pane_Manaus_4',
+            onEachFeature: pop_Manaus_4,
             pointToLayer: function (feature, latlng) {
                 var context = {
                     feature: feature,
                     variables: {}
                 };
-                return L.circleMarker(latlng, style_Manaus_5_0(feature));
+                return L.circleMarker(latlng, style_Manaus_4_0(feature));
             },
         });
-        bounds_group.addLayer(layer_Manaus_5);
-        map.addLayer(layer_Manaus_5);
-        function pop_LimitedoAmazonas_6(feature, layer) {
+        bounds_group.addLayer(layer_Manaus_4);
+        map.addLayer(layer_Manaus_4);
+        function pop_LimitedoAmazonas_5(feature, layer) {
             var popupContent = '<table>\
                     <tr>\
                         <td colspan="2">' + (feature.properties['OBJECTID'] !== null ? autolinker.link(feature.properties['OBJECTID'].toLocaleString()) : '') + '</td>\
@@ -435,9 +380,9 @@
 			layer.bindPopup(content, { maxHeight: 400 });
         }
 
-        function style_LimitedoAmazonas_6_0() {
+        function style_LimitedoAmazonas_5_0() {
             return {
-                pane: 'pane_LimitedoAmazonas_6',
+                pane: 'pane_LimitedoAmazonas_5',
                 opacity: 1,
                 color: 'rgba(77,77,77,1.0)',
                 dashArray: '15.0,3.0,6.0,3.0,6.0,3.0',
@@ -450,29 +395,28 @@
                 interactive: true,
             }
         }
-        map.createPane('pane_LimitedoAmazonas_6');
-        map.getPane('pane_LimitedoAmazonas_6').style.zIndex = 406;
-        map.getPane('pane_LimitedoAmazonas_6').style['mix-blend-mode'] = 'normal';
-        var layer_LimitedoAmazonas_6 = new L.geoJson(json_LimitedoAmazonas_6, {
+        map.createPane('pane_LimitedoAmazonas_5');
+        map.getPane('pane_LimitedoAmazonas_5').style.zIndex = 405;
+        map.getPane('pane_LimitedoAmazonas_5').style['mix-blend-mode'] = 'normal';
+        var layer_LimitedoAmazonas_5 = new L.geoJson(json_LimitedoAmazonas_5, {
             attribution: '',
             interactive: true,
-            dataVar: 'json_LimitedoAmazonas_6',
-            layerName: 'layer_LimitedoAmazonas_6',
-            pane: 'pane_LimitedoAmazonas_6',
-            onEachFeature: pop_LimitedoAmazonas_6,
-            style: style_LimitedoAmazonas_6_0,
+            dataVar: 'json_LimitedoAmazonas_5',
+            layerName: 'layer_LimitedoAmazonas_5',
+            pane: 'pane_LimitedoAmazonas_5',
+            onEachFeature: pop_LimitedoAmazonas_5,
+            style: style_LimitedoAmazonas_5_0,
         });
-        bounds_group.addLayer(layer_LimitedoAmazonas_6);
-        map.addLayer(layer_LimitedoAmazonas_6);
+        bounds_group.addLayer(layer_LimitedoAmazonas_5);
+        map.addLayer(layer_LimitedoAmazonas_5);
         var baseMaps = {};
         var overlaysTree = [
-            {label: '<img src="legend/LimitedoAmazonas_6.png" /> Limite do Amazonas', layer: layer_LimitedoAmazonas_6},
-            {label: '<img src="legend/Manaus_5.png" /> Manaus', layer: layer_Manaus_5},
+            {label: '<img src="legend/LimitedoAmazonas_5.png" /> Limite do Amazonas', layer: layer_LimitedoAmazonas_5},
+            {label: '<img src="legend/Manaus_4.png" /> Manaus', layer: layer_Manaus_4},
         {label: '<b>elementos</b>', selectAllCheckbox: true, children: [
-            {label: '<img src="legend/RodoviasFederal2022_4.png" /> Rodovias Federal (2022)', layer: layer_RodoviasFederal2022_4},
-            {label: '<img src="legend/RodoviasEstaduais2022_3.png" /> Rodovias Estaduais (2022)', layer: layer_RodoviasEstaduais2022_3},]},
-            {label: '<img src="legend/Subregies_2.png" /> Sub-regiões', layer: layer_Subregies_2},
-            {label: '<img src="legend/LimitesMunicipais_1.png" /> Limites Municipais', layer: layer_LimitesMunicipais_1},
+            {label: '<img src="legend/RodoviasFederal2022_3.png" /> Rodovias Federal (2022)', layer: layer_RodoviasFederal2022_3},
+            {label: '<img src="legend/RodoviasEstaduais2022_2.png" /> Rodovias Estaduais (2022)', layer: layer_RodoviasEstaduais2022_2},]},
+            {label: '<img src="legend/Subregies_1.png" /> Sub-regiões', layer: layer_Subregies_1},
             {label: 'Mesorregiões<br /><table><tr><td style="text-align: center;"><img src="legend/Mesorregies_0_CentroAmazonense0.png" /></td><td>Centro Amazonense</td></tr><tr><td style="text-align: center;"><img src="legend/Mesorregies_0_NorteAmazonense1.png" /></td><td>Norte Amazonense</td></tr><tr><td style="text-align: center;"><img src="legend/Mesorregies_0_SudoesteAmazonense2.png" /></td><td>Sudoeste Amazonense</td></tr><tr><td style="text-align: center;"><img src="legend/Mesorregies_0_SulAmazonense3.png" /></td><td>Sul Amazonense</td></tr></table>', layer: layer_Mesorregies_0},]
         var lay = L.control.layers.tree(null, overlaysTree,{
             //namedToggle: true,
@@ -485,15 +429,15 @@
         });
         lay.addTo(map);
         setBounds();
-        resetLabels([layer_Manaus_5]);
+        resetLabels([layer_Manaus_4]);
         map.on("zoomend", function(){
-            resetLabels([layer_Manaus_5]);
+            resetLabels([layer_Manaus_4]);
         });
         map.on("layeradd", function(){
-            resetLabels([layer_Manaus_5]);
+            resetLabels([layer_Manaus_4]);
         });
         map.on("layerremove", function(){
-            resetLabels([layer_Manaus_5]);
+            resetLabels([layer_Manaus_4]);
         });
         </script>
     </body>
